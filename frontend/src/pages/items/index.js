@@ -56,5 +56,21 @@ export default function ItemsPage(){
             </Layout>
         )
     }
+
+    return(
+        <>
+        <Layout title="Items">
+            <div className="flex justify-between items-center mb-8">
+                <h1 className="text-3xl font-bold">Items Management</h1>
+                <Link href="/items/create" className="btn btn-primary">
+                    Create New Item
+                </Link>
+                <div className="bg-base-100 rounded-lg shadow p-6">
+                    <ItemList items={items} onDelete={handleDelete} />
+                </div>
+            </div>
+        </Layout>
+        </>
+    )
 }
 
